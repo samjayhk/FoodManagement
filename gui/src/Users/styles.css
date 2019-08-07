@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('../assets/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('../assets/OpenSans-Bold.ttf');
+}
+@font-face {
+    font-family: 'Open Sans ExtraBold';
+    src: url('../assets/OpenSans-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('../assets/OpenSans-Light.ttf');
+}
+@font-face {
+    font-family: 'Open Sans SemiBold';
+    src: url('../assets/OpenSans-SemiBold.ttf');
+}
+
+.user_container {
+    display: flex;
+	height: 85%;
+    max-height: 85%;
+    overflow: hidden;
+}
+
+.user_form_container {
+	margin: auto;
+    max-width: 90%;
+    min-width: 60%;
+}
+
+.from_container {
+	border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form_input_contanier {
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: 0px 0 20px 0;
+	width: 100%
+}
+
+.from_input_container_line {
+	display: flex;
+}
+
+.form_input_contanier_small {
+	width: 25%;
+	border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: 0px 5px 20px 0;
+}
+
+.form_title {
+	display: flex;
+    font-size: 16px;
+    color: rgb(105,105,105);
+    padding: 20px 0;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    font-family: Open Sans SemiBold;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1)
+}
+
+label {
+	display: flex;
+    color: green;
+    font-family: Open Sans Light;
+    font-size: 12px;
+    width: 100%;
+    padding: 2px 12px;
+}
+
+input[type=text], input[type=number], input[type=password] {
+    width: 100%;
+    padding: 4px 12px;
+    border: none;
+    font-family: Open Sans SemiBold;
+	outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #42A341;
+    color: white;
+    padding: 8px 0;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Open Sans SemiBold;
+    font-size: 16px;
+	box-shadow: 0px 0px 20px 2px rgba(66, 163, 65, 0.5);
+	-webkit-appearance: none;
+}
+
+input[type=button] {
+	margin: 0 auto;
+    color: #42A341;
+    font-family: Open Sans Regular;
+    font-size: 14px;
+    border: none;
+    width: 100%;
+    background: none;
+    cursor: pointer;
+    padding: 12px 0;
+}

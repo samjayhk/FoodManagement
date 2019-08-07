@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "foodmanagement",
+    "schemaGraphql": "s3://oodanagement-20181212171524-deployment/amplify-appsync-files/schema.graphql.1544606371212",
+    "ResolverBucket": "oodanagement-20181212171524-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1544606371212"
+}

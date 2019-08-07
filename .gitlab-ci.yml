@@ -1,0 +1,21 @@
+image: node:latest
+
+before_script:
+  - echo "starting ci...."
+  
+stages: 
+  - build
+  - test
+
+build_job:
+  stage: build
+  script:
+    - cd gui
+    - npm install
+
+test_job:
+  stage: test
+  script:
+    - cd gui
+    - npm install jest
+    - npm run test

@@ -1,0 +1,91 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "oodanagement-20181212171524-authRole",
+			"UnauthRoleArn": "arn:aws:iam::156702762403:role/oodanagement-20181212171524-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::156702762403:role/oodanagement-20181212171524-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "oodanagement-20181212171524-deployment",
+			"UnauthRoleName": "oodanagement-20181212171524-unauthRole",
+			"StackName": "oodanagement-20181212171524",
+			"StackId": "arn:aws:cloudformation:us-east-1:156702762403:stack/oodanagement-20181212171524/7666ea20-fdee-11e8-865b-500c219a3c36"
+		}
+	},
+	"auth": {
+		"cognito3dd5375d": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/oodanagement-20181212171524-deployment/amplify-cfn-templates/auth/cognito3dd5375d-cloudformation-template.yml",
+				"logicalId": "authcognito3dd5375d"
+			},
+			"lastPushTimeStamp": "2018-12-12T09:23:19.049Z",
+			"output": {
+				"AppClientSecret": "11ksu0p4hfq0sacpgdrt2f1t5kp7o8j929g3po792c033nh8brgp",
+				"UserPoolId": "us-east-1_pvZViZmhP",
+				"AppClientIDWeb": "518qb5va9p5a98vva6hbnau32j",
+				"AppClientID": "64flrfqun8pv8iaoqmq31568h7",
+				"IdentityPoolId": "us-east-1:71130469-550d-4a76-a4c9-9fd704c79713",
+				"IdentityPoolName": "cognito3dd5375d_identitypool_3dd5375d",
+				"UserPoolName": "cognito3dd5375d_userpool_3dd5375d"
+			},
+			"lastPushDirHash": "kyTDLhTwL/fLOeWE9lZ5DunFCdc="
+		}
+	},
+	"api": {
+		"foodmanagement": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "API_KEY",
+				"GraphQLAPIIdOutput": "bytk3ap3yve3nd5oufdsplk4ae",
+				"GraphQLAPIEndpointOutput": "https://rfhretmprfhfxgfrirmt7uupmm.appsync-api.us-east-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-c75enubaxfhzbbjjexrziixfhu"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/oodanagement-20181212171524-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apifoodmanagement"
+			},
+			"lastPushTimeStamp": "2018-12-12T09:23:19.049Z",
+			"lastPushDirHash": "/FmaxNbMUrxhld81CE+duppJ5pg="
+		}
+	},
+	"storage": {
+		"s3b95cd658": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/oodanagement-20181212171524-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storages3b95cd658"
+			},
+			"lastPushTimeStamp": "2018-12-12T09:23:19.049Z",
+			"output": {
+				"BucketName": "foodmanagementd55f6622a99f4e8d855baba9a6b1a41a",
+				"Region": "us-east-1"
+			},
+			"lastPushDirHash": "NTUVm0qe1PZ+14nr9ovH/Ae9yqA="
+		}
+	},
+	"function": {
+		"foodmanagement11597bf9": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [],
+			"lastBuildTimeStamp": "2018-12-12T09:19:29.413Z",
+			"lastPackageTimeStamp": "2018-12-12T09:19:29.482Z",
+			"distZipFilename": "foodmanagement11597bf9-1544606369-latest-build.zip",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/oodanagement-20181212171524-deployment/amplify-cfn-templates/function/foodmanagement11597bf9-cloudformation-template.json",
+				"logicalId": "functionfoodmanagement11597bf9"
+			},
+			"lastPushTimeStamp": "2018-12-12T09:23:19.049Z",
+			"output": {
+				"Region": "us-east-1",
+				"Arn": "arn:aws:lambda:us-east-1:156702762403:function:foodmanagement11597bf9",
+				"Name": "foodmanagement11597bf9"
+			},
+			"lastPushDirHash": "xxrPE5rqyOj3TMWTtKzLnW3E7z0="
+		}
+	}
+}

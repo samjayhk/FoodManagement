@@ -1,0 +1,9 @@
+{
+    "bucketName": "foodmanagementd55f6622a99f4e8d855baba9a6b1a41a",
+    "authPolicyName": "s3_amplify_b95cd658",
+    "unauthPolicyName": "s3_amplify_b95cd658",
+    "authRoleName": "oodanagement-20181212171524-authRole",
+    "unauthRoleName": "oodanagement-20181212171524-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": ""
+}

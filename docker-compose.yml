@@ -1,0 +1,22 @@
+version: "3"
+services:
+    nginx:
+        image: nginx
+        depends_on:
+         - api
+         - mongo
+         - gui
+        ports:
+         - "8888:80"
+    api:
+        build: api/
+        ports:
+         - "3000:3000"
+    gui:
+        build: gui/
+        ports:
+        - "4000:4000"
+    mongo:
+        image: mongo
+        ports:
+        - "27017:27017"

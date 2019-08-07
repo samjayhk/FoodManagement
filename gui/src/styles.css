@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('./assets/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('./assets/OpenSans-Bold.ttf');
+}
+@font-face {
+    font-family: 'Open Sans ExtraBold';
+    src: url('./assets/OpenSans-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('./assets/OpenSans-Light.ttf');
+}
+@font-face {
+    font-family: 'Open Sans SemiBold';
+    src: url('./assets/OpenSans-SemiBold.ttf');
+}
+
+.nav {
+	width: 85%;
+    display: flex;
+    margin: 0 auto 0 auto;
+    padding: 20px 0 0 0;
+    max-height: 15%;
+	overflow: hidden;
+}
+
+.menu {
+	display: none;
+}
+
+.svgfill {
+	fill: #074C00;
+}
+
+.svgfill_white {
+	fill: white;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-family: Open Sans ExtraBold;
+	margin: auto 0 0 0;
+	text-decoration: none;
+}
+
+.logo_big {
+	font-size: 24px;
+	background: -ms-linear-gradient(to bottom right, #074C00, #42A341, #B8E2A3);
+    background: -webkit-linear-gradient(to bottom right, #074C00, #42A341, #B8E2A3);
+    background: linear-gradient(to bottom right, #074C00, #42A341, #B8E2A3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo_small {
+	font-size: 20px;
+	background: -ms-linear-gradient(to bottom right, #074C00, #42A341, #B8E2A3);
+    background: -webkit-linear-gradient(to bottom right, #074C00, #42A341, #B8E2A3);
+    background: linear-gradient(to bottom right, #074C00, #42A341, #B8E2A3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav_list_menu {
+	display: flex;
+    margin: auto 0 0 auto;
+    font-family: Open Sans SemiBold;
+}
+
+.nav_item {
+	font-size: 18px;
+    padding: 0 20px;
+	color: rgb(166,124,0);
+	text-decoration: none;
+}
+
+.nav_list_special {
+	display: flex;
+	margin: auto 0 0 0;
+    font-family: Open Sans SemiBold;
+}
+
+.s {
+	background-color: #42A341;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.progress{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 0.25rem;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 999999999999999999999999999999;
+    font-size: .75rem;
+}
+
+.progress_bar{
+	z-index: 999;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    color:#fff;
+    text-align:center;
+    background-color:#007bff;
+    transition:width .6s ease;
+}
+
+.bg_success{
+    background-color:#28a745!important;
+}
+
+.progress_bar_striped{
+    background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size:1rem 1rem
+}
+
+.progress_bar_animated{
+    -webkit-animation:progress_bar_stripes 0.5s linear infinite;
+    animation:progress_bar_stripes 0.5s linear infinite
+}
+
+@-webkit-keyframes progress_bar_stripes{
+    from{
+        background-position:1rem 0
+    }
+    to{
+        background-position:0 0
+    }
+}
+
+@keyframes progress_bar_stripes{
+    from{
+        background-position:1rem 0
+    }
+    to{
+        background-position:0 0
+    }
+}
+
+.snackbar_container {
+	width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+	 -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s forwards;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s forwards;
+}
+
+.snackbar {
+  visibility: visible;
+    min-width: 250px;
+    margin: 0 auto;
+    background-color: #42A341;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@media only screen and (max-width: 712px) {
+	.nav {
+		width: 100%;
+		margin: 0;
+		    padding: 20px 20px 0 20px;
+	}
+
+	.logo {
+		margin: 0;
+	}
+	
+	.logo_big {
+		font-size: 18px;
+	}
+
+	.logo_small {
+		font-size: 16px;
+	}
+	
+	.nav_list_menu, .nav_list_special {
+		display: none;
+	}
+	
+	.menu {
+		display: flex;
+		margin: auto 0 auto auto;
+		width: 50px;
+		height: 50px;
+	}
+	
+	.menu > svg {
+		height: 100%;
+	}
+}

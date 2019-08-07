@@ -1,0 +1,217 @@
+input createFoodMutationInput {
+  name: String
+  type: String
+  expiry: String
+  keywords: String
+  cover: String
+  clientMutationId: String
+}
+
+type createFoodMutationPayload {
+  result: FoodType
+  clientMutationId: String
+}
+
+type ExpiryLibrary implements Node {
+  """The ID of an object"""
+  id: ID!
+
+  """A list of the foods in the database"""
+  foodsConnection(after: String, first: Int, before: String, last: Int, expiry: String, create: String, name: String, keywords: [String], id: String): FoodConnection
+}
+
+"""A connection to a list of items."""
+type FoodConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [FoodEdge]
+}
+
+"""An edge in a connection."""
+type FoodEdge {
+  """The item at the end of the edge"""
+  node: FoodType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type FoodsLibrary implements Node {
+  """The ID of an object"""
+  id: ID!
+
+  """A list of the foods in the database"""
+  foodsConnection(after: String, first: Int, before: String, last: Int, expiry: String, create: String, name: String, keywords: [String], id: String): FoodConnection
+}
+
+type FoodType implements Node {
+  """The ID of an object"""
+  id: ID!
+  result: String
+  name: String
+  create: String
+  type: String
+  expiry: String
+  keywords: String
+  cover: String
+  days: String
+}
+
+input loginMutationInput {
+  mobile: String
+  password: String
+  clientMutationId: String
+}
+
+type loginMutationPayload {
+  result: Token
+  clientMutationId: String
+}
+
+input modifyFoodMutationInput {
+  id: String
+  name: String
+  type: String
+  expiry: String
+  keywords: String
+  clientMutationId: String
+}
+
+type modifyFoodMutationPayload {
+  result: FoodType
+  clientMutationId: String
+}
+
+type Mutation {
+  login(input: loginMutationInput!): loginMutationPayload
+  registration(input: registerMutationInput!): registerMutationPayload
+  createFood(input: createFoodMutationInput!): createFoodMutationPayload
+  modifyFood(input: modifyFoodMutationInput!): modifyFoodMutationPayload
+  removeFood(input: removeFoodMutationInput!): removeFoodMutationPayload
+}
+
+"""An object with an ID"""
+interface Node {
+  """The id of the object."""
+  id: ID!
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+type Query {
+  """Fetches an object given its ID"""
+  node(
+    """The ID of an object"""
+    id: ID!
+  ): Node
+
+  """The User Library"""
+  userLibrary: UsersLibrary
+
+  """The Food Library"""
+  foodLibrary: FoodsLibrary
+
+  """Search Service"""
+  search: SearchLibrary
+
+  """Expiry Service for last 6 item"""
+  expiry: ExpiryLibrary
+
+  """Expiry Service for last 6 item"""
+  selectFood: SelectLibrary
+}
+
+input registerMutationInput {
+  mobile: String
+  password: String
+  clientMutationId: String
+}
+
+type registerMutationPayload {
+  result: UserType
+  clientMutationId: String
+}
+
+input removeFoodMutationInput {
+  id: String
+  clientMutationId: String
+}
+
+type removeFoodMutationPayload {
+  result: FoodType
+  clientMutationId: String
+}
+
+type SearchLibrary implements Node {
+  """The ID of an object"""
+  id: ID!
+
+  """A list of the foods in the database"""
+  foodsConnection(after: String, first: Int, before: String, last: Int, expiry: String, create: String, name: String, keywords: [String], id: String): FoodConnection
+}
+
+type SelectLibrary implements Node {
+  """The ID of an object"""
+  id: ID!
+
+  """A list of the foods in the database"""
+  foodsConnection(after: String, first: Int, before: String, last: Int, expiry: String, create: String, name: String, keywords: [String], id: String): FoodConnection
+}
+
+type Token implements Node {
+  """The ID of an object"""
+  id: ID!
+  result: String
+  token: String
+}
+
+"""A connection to a list of items."""
+type UserConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [UserEdge]
+}
+
+"""An edge in a connection."""
+type UserEdge {
+  """The item at the end of the edge"""
+  node: UserType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type UsersLibrary implements Node {
+  """The ID of an object"""
+  id: ID!
+
+  """A list of the users in the database"""
+  usersConnection: UserConnection
+}
+
+type UserType implements Node {
+  """The ID of an object"""
+  id: ID!
+  result: String
+  mobile: String
+  reg: String
+  last: String
+}
+

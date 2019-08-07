@@ -1,0 +1,16 @@
+projects:
+  foodmanagement:
+    schemaPath: src\graphql\schema.json
+    includes:
+      - src\graphql\**\*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src\graphql
+        graphQLApiId: bytk3ap3yve3nd5oufdsplk4ae
+      endpoints:
+        prod: >-
+          https://rfhretmprfhfxgfrirmt7uupmm.appsync-api.us-east-1.amazonaws.com/graphql

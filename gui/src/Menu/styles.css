@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('../assets/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('../assets/OpenSans-Bold.ttf');
+}
+@font-face {
+    font-family: 'Open Sans ExtraBold';
+    src: url('../assets/OpenSans-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('../assets/OpenSans-Light.ttf');
+}
+@font-face {
+    font-family: 'Open Sans SemiBold';
+    src: url('../assets/OpenSans-SemiBold.ttf');
+}
+
+.menu {
+	width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    position: fixed;
+    background-color: rgba(255, 255,255, 0.4);
+    backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+}
+
+.menu_container {
+	display: flex;
+    margin: auto;
+    max-height: 95%;
+    height: 90%;
+}
+
+.menu_item_container {
+	margin: auto;
+    display: block;
+}
+
+.nav_item {
+	font-size: 40px;
+    padding: 20px 20px;
+    color: rgb(166,124,0);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+	font-family: Open Sans SemiBold;
+	text-transform: uppercase;
+}
+
+.menu_cancel {
+	display: flex;
+    width: 25px;
+    max-height: 5%;
+    margin: 20px 20px 0 auto;
+    height: 5%;
+}
+
+.menu_cancel > svg {
+	height: 100%;
+}
